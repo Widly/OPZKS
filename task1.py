@@ -49,6 +49,9 @@ if __name__ == "__main__":
         path = sys.argv[1]
         iterations = int(sys.argv[2])
         clear_type = sys.argv[3]
+
+        if iterations <= 0:
+            raise ValueError
     except(IndexError):
         print('please, type all params')
         sys.exit()
